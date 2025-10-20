@@ -1,57 +1,71 @@
-# Unity3D---Game-of-Life
+# Game of Life – Cellular Automaton Simulation
 
-Game of Life – Cellular Automaton Simulation
+This project is an interactive simulation of **Conway’s Game of Life**, developed in **Unity 3D**.  
+It visualizes the evolution of a cellular automaton governed by simple deterministic rules that, when applied iteratively, produce complex and emergent behavior.  
+The project serves as a demonstration of procedural generation, simulation logic, and efficient state management within a real-time 3D engine.
 
-This project is an interactive simulation of Conway’s Game of Life, implemented in Unity 3D. The application visualizes the evolution of a cellular automaton based on simple mathematical rules that give rise to complex, lifelike behavior. The primary goal of this project was to explore procedural generation, simulation logic, and performance-conscious rendering within Unity’s 3D environment.
+---
 
-Concept Overview
+## Overview
 
-The Game of Life, originally formulated by the British mathematician John Horton Conway in 1970, is a zero-player game in which the state of a two-dimensional grid evolves over time according to a set of deterministic rules. Each cell can be either alive or dead, and its state in the next generation is determined by the number of living neighbors:
+The **Game of Life**, proposed by mathematician **John Horton Conway** in 1970, is a zero-player game in which the evolution of a two-dimensional grid is determined entirely by its initial state.  
+Each cell in the grid can exist in one of two states: *alive* or *dead*. With each generation, the following transition rules are applied:
 
-A living cell with fewer than two live neighbors dies (underpopulation).
+1. Any live cell with fewer than two live neighbors dies (underpopulation).  
+2. Any live cell with two or three live neighbors survives.  
+3. Any live cell with more than three live neighbors dies (overpopulation).  
+4. Any dead cell with exactly three live neighbors becomes a live cell (reproduction).  
 
-A living cell with two or three live neighbors survives.
+Despite their simplicity, these rules can lead to complex patterns such as oscillators, gliders, and self-replicating systems, illustrating the principles of emergent behavior.
 
-A living cell with more than three live neighbors dies (overpopulation).
+---
 
-A dead cell with exactly three live neighbors becomes alive (reproduction).
+## Application Description
 
-Despite these simple rules, the system can produce extraordinarily complex and often unpredictable patterns that resemble biological growth, self-organization, and even computation.
+The application dynamically generates a simulation grid based on the current window resolution.  
+Each grid cell corresponds to a 10×10 pixel area, ensuring that the total board size adapts to any screen dimension.
 
-Application Description
+Cells are represented as 3D cubes whose states update in real time according to Conway’s rules.  
+Users can interact with the simulation through a simple user interface that provides full control over the simulation lifecycle.
 
-The Unity application automatically generates a custom grid based on the current window resolution. Each grid cell represents a 10×10 pixel area, allowing the board size to dynamically adjust to the user’s screen dimensions.
+### Core Functionality
 
-At runtime, the grid is populated with cells represented by 3D cubes, whose states are updated frame by frame according to Conway’s rules. The user can start or stop the simulation at any time, reset the grid, or generate a new board using one of two available generation modes:
+- **Dynamic grid generation** – the grid scales automatically based on screen resolution (10 pixels per cell).  
+- **Simulation control** – start, stop, and reset the simulation at any time.  
+- **Two generation modes**:  
+  - *Random mode* – randomly populates the board with live and dead cells.  
+  - *Symmetrical mode* – generates a mirrored initial state to observe more structured evolution.  
+- **Responsive visualization** – updates occur in real time for smooth pattern transitions.  
+- **Optimized performance** – efficient handling of grid updates even for large board sizes.
 
-Random Generation – fills the board with a random distribution of live and dead cells.
+---
 
-Symmetrical Generation – creates a balanced, mirrored layout to observe more structured evolution patterns.
+## Technical Summary
 
-The visualization updates in real time, providing immediate feedback on how small initial differences in configuration can lead to vastly different outcomes.
+- **Engine:** Unity 3D  
+- **Programming Language:** C#  
+- **Rendering:** Real-time procedural mesh updates  
+- **Primary Focus:** Cellular automata, algorithm simulation, procedural generation, and optimization of state transitions  
 
-Key Features
+---
 
-Dynamic board generation based on display resolution (10 px per grid cell)
+## Educational Purpose
 
-Start, stop, and reset functionality for full control over simulation flow
+This project serves as a visual and conceptual exploration of how simple rule-based systems can give rise to complex behavior.  
+It provides an accessible platform for studying **cellular automata**, **emergent phenomena**, and **algorithmic modeling**.  
+In addition to its educational purpose, it offers a foundation for further experimentation in generative systems, artificial life, or computational simulation within Unity.
 
-Two distinct generation modes: random and symmetrical
+---
 
-Optimized update cycles for efficient real-time rendering
+## Future Extensions
 
-Modular code structure suitable for further algorithmic experimentation
+- Implementation of color-based visual states to represent cell age or energy  
+- Introduction of custom rule sets beyond the standard Conway model  
+- 3D cellular automata with volumetric evolution  
+- Pattern import/export functionality for well-known Life configurations  
 
-Technical Summary
+---
 
-Engine: Unity 3D
+## License
 
-Language: C#
-
-Rendering: Real-time procedural mesh updates
-
-Primary Focus: Algorithm simulation, procedural content generation, and state management
-
-Educational Purpose
-
-This project demonstrates the emergent behavior of simple rule-based systems and serves as an educational tool for understanding cellular automata, simulation design, and algorithmic visualization in a 3D engine environment. It can also serve as a basis for further exploration of generative systems, artificial life, and computational modeling.
+This project is released for educational and non-commercial use.
