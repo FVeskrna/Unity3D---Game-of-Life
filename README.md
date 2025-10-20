@@ -66,6 +66,11 @@ In addition to its educational purpose, it offers a foundation for further exper
 
 ---
 
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/215cf57e-9a77-478b-8f55-31ab79ad44c8" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/a7bb6b00-59d6-41bb-942f-11dc8806863e" />
+
+
+
 ## License
 
 This project is released for educational and non-commercial use.
